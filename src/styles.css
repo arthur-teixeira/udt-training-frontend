@@ -1,1 +1,26 @@
-/* You can add global styles to this file, and also import other style files */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700&display=swap');
+
+:root {
+  --blue: #4299FF;
+  --red: #E64D3D;
+  --lightgray: #EAEAEA;
+  --gray: #3F3F3F;
+  --lightred: #F8D7DA;
+  --darkred: #731E26;
+}
+
+body {
+  background: var(--blue);
+  color: var(--gray);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Roboto', sans-serif;
+}
+
+*:focus {
+  outline: none;
+}
