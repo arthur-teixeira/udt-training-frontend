@@ -7,8 +7,7 @@ import { Observable } from 'rxjs';
   providedIn: 'root'
 })
 export class TodoService {
-  private baseUrl = "http://localhost:7071/api";
-  // private baseUrl = "https://udt-training.azurewebsites.net/api";
+  private baseUrl = "https://udt-training.azurewebsites.net/api";
 
   constructor(
     private httpClient: HttpClient,
