@@ -6,5 +6,17 @@ export type Todo = {
 
 export type TodoRequest = {
   name: string,
-  completed: boolean
+  completed: boolean,
+  profile_id?: string
 };
+
+export type Profile = {
+  id: string,
+  name: string,
+}
+
+export type Role = {
+  id: string,
+  name: string,
+  profiles: Profile[],
+}

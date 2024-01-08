@@ -1,0 +1,33 @@
+<div class="content">
+  <div class="textGroup">
+    <input type="text" #role placeholder="Create new role">
+    <button (click)="onCreateRole(role.value)">Create</button>
+  </div>
+  <div class="textGroup">
+    <input type="text" #profile placeholder="Create new user">
+    <button (click)="onCreateProfile(profile.value)">Create</button>
+  </div>
+</div>
+
+<div class="content">
+  <div class="role">
+    <label for="roleSelect">Role:</label>
+    <div>
+      <select name="role" id="roleSelect" (change)="onRoleChanged($event)">
+        <option class="name" *ngFor="let role of roles" [value]="role.id">{{ role.name }}</option>
+      </select>
+      <button class="btnDelete" (click)="onDeleteRole()"><fa-icon [icon]="faTrash" size="lg" /></button>
+    </div>
+  </div>
+
+  <div class="profile" *ngIf="profiles.length > 0">
+    <label for="profileSelect">Profile:</label>
+    <div>
+      <select name="profile" id="profileSelect" (change)="onProfileChanged($event)">
+        <option class="name" *ngFor="let profile of profiles" [value]="profile.id">{{ profile.name }}</option>
+      </select>
+      <button class="btnDelete" (click)="onDeleteProfile()"><fa-icon [icon]="faTrash" size="lg" /></button>
+    </div>
+  </div>
+</div>
+

@@ -1,0 +1,20 @@
+<section class="main">
+  <div *ngIf="hasError" class="error">
+    <p>An error has occured.</p>
+  </div>
+
+  <div class="topMenu">
+    <form [formGroup]="todoForm" class="todoForm">
+      <input type="text" formControlName="name" placeholder="Add new task" class="todoInput" />
+      <button (click)="createTodo()" [disabled]="!todoForm.valid">Add</button>
+    </form>
+    <nav class="filters">
+      <button *ngFor="let filter of filters" (click)="setFilter(filter)"
+        [ngClass]="{active: currentFilter === filter}">{{ filter }}</button>
+    </nav>
+  </div>
+  <div class="todoList">
+    <app-todo *ngFor="let todo of filteredTodos" [todo]="todo" (editEvent)="onTodoEdited($event)"
+      (deleteEvent)="onTodoDeleted($event)" (errorEvent)="onError()"></app-todo>
+  </div>
+</section>

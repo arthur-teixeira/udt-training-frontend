@@ -1,2 +1,3 @@
-- error handling
-
+- Delete profile
+- Delete role
+  - trigger: onDelete role, delete all profiles

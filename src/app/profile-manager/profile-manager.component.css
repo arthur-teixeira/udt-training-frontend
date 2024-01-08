@@ -1,0 +1,49 @@
+.content {
+  background: red;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  gap: 10px;
+  justify-content: center;
+  margin: 2rem auto;
+  background: #FFFFFF;
+  max-width: 500px;
+  padding: 1rem;
+  border-radius: 5px;
+  box-shadow: 0px 0px 20px -9px rgba(0, 0, 0, 0.75);
+}
+
+.textGroup, .profile, .role {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+
+select {
+  background: none;
+  border-radius: 5px;
+  padding: 0.5rem;
+  border: 1px solid #ABABAB;
+}
+
+.textGroup>* {
+  border-radius: 5px;
+}
+
+.textGroup>input {
+  width: 80%;
+  border: 1px solid #ABABAB;
+  padding: 0.5rem;
+}
+
+.textGroup>button {
+  width: 15%;
+  padding: 0.5rem;
+  border: none;
+  color: #FFF;
+  font-weight: bold;
+  background: var(--blue);
+  cursor: pointer;
+  transition: background .25s;
+}
+
