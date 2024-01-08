@@ -92,8 +92,7 @@ export class ProfileManagerComponent implements OnInit, OnDestroy {
     const sub = this.profileService.deleteProfile(this.selectedRole!.id, this.profileId)
       .subscribe(() => {
         this.profiles = this.profiles.filter(p => p.id !== this.profileId);
-        this.profileId = "";
-        this.profileService.currentProfileId.next("");
+        this.getProfiles(this.roles[0].id);
       });
 
     this.subscriptions.push(sub);
@@ -104,6 +103,7 @@ export class ProfileManagerComponent implements OnInit, OnDestroy {
       .subscribe(() => {
         this.roles = this.roles.filter(r => r.id !== this.selectedRole!.id);
         this.selectedRole = this.roles[0];
+        this.getProfiles(this.roles[0].id);
       });
 
     this.subscriptions.push(sub);

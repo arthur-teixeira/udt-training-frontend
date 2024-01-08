@@ -17,6 +17,7 @@
   width: 100%;
   display: flex;
   justify-content: space-between;
+  align-items: center;
 }
 
 select {
@@ -47,3 +48,10 @@ select {
   transition: background .25s;
 }
 
+
+.btnDelete {
+  color: var(--red);
+  border: none;
+  background: none;
+  margin-left: 5px;
+}
